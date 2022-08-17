@@ -1,0 +1,135 @@
+{
+  "name": "Alexa Music",
+  "description": "ᴀʟᴇxᴀ ɪs ᴀ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴜsɪᴄ ʙᴏᴛ ᴡɪᴛʜ ᴘʀᴏᴘᴇʀ ғᴜɴᴄᴛɪᴏɴs ᴡʀɪᴛᴛᴇɴ ɪɴ ᴘʏᴛʜᴏɴ ᴡɪᴛʜ ᴘʏʀᴏɢʀᴀᴍ ᴀɴᴅ ᴘʏ-ᴛɢᴄᴀʟʟs.",
+  "logo": "https://telegra.ph/file/83a547c997953a4d75d87.jpg",
+  "keywords": [
+  "python3",
+  "telegram"
+  ],
+  "stack": "container",
+  "env": {
+    "API_ID": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": "",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": "",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "A Bot's token from Botfather",
+      "value": "",
+      "required": true
+    },
+    "DURATION_LIMIT": {
+      "description": "Duration Limit for Playout (In Mins).. Example: 900",
+      "value": "900",
+      "required": true
+    },
+    "MONGO_DB_URI": {
+      "description": "Mongo DB URL",
+      "value": "",
+      "required": true
+    },
+    "MUSIC_BOT_NAME": {
+      "description": "A name for your Music Bot.",
+      "value": "Asad_Music_Bot",
+      "required": true
+    },
+    "SUPPORT_CHANNEL": {
+      "description": "Support Channel Link if you have any, Leave blank if no support. Your link must start with https://t.me/",
+      "value": "AsadSupport",
+      "required": false
+    },
+    "SUPPORT_GROUP": {
+      "description": "Support Group Link if you have any, Leave blank if no support. Your link must start with https://t.me/",
+      "value": "Shayri_Music_Lovers",
+      "required": false
+    },
+    "OWNER_ID": {
+      "description": "The user id(s) of user(s) whom you would like to add as a OWNER. Multiple values shall be seperated with a space.",
+      "value": "1342820594",
+      "required": true
+    },
+    "STRING_SESSION1": {
+      "description": "A Pyrogram String Session. One Assistant is Compulsory.",
+      "value": "",
+      "required": true
+    },
+    "STRING_SESSION2": {
+      "description": "A Pyrogram String Session. Leave blank if you dont want Multi-Assistant",
+      "value": "",
+      "required": false
+    },
+    "STRING_SESSION3": {
+      "description": "A Pyrogram String Session. Leave blank if you dont want Multi-Assistant",
+      "value": "",
+      "required": false
+    },
+    "STRING_SESSION4": {
+      "description": "A Pyrogram String Session. Leave blank if you dont want Multi-Assistant",
+      "value": "",
+      "required": false
+    },
+    "STRING_SESSION5": {
+      "description": "A Pyrogram String Session. Leave blank if you dont want Multi-Assistant",
+      "value": "",
+      "required": false
+    },
+    "HEROKU_API_KEY": {
+      "description": "Your Heroku account's API key",
+      "value": "",
+      "required": false
+    },
+    "HEROKU_APP_NAME": {
+      "description": "Your heroku app/bot's name",
+      "value": "",
+      "required": false
+    },
+    "LOG_GROUP_ID": {
+      "description": "Your Log Group ID, add your bot and promote as an admin with full rights!. Use only Group. Please don't use Channel ID.",
+      "value": "-1001717283097",
+      "required": true
+    },
+    "SUDO_USERS": {
+      "description": "The user id(s) of user(s) whom you would like to add as a SUDO. Multiple values shall be seperated with a space.",
+      "value": "",
+      "required": true
+    },
+    "LOG_SESSION": {
+      "description": "A Pyrogram String Session for LOGGING or u can also add STRING_SESSION1 Also.",
+      "value": "",
+      "required": true
+    },
+    "UPSTREAM_REPO": {
+      "description": "If you dont know this, Leave as it is",
+      "value": "https://github.com/jankarikiduniya/AlexaMusic",
+      "required": true
+    },
+    "UPSTREAM_BRANCH": {
+      "description": "Repo's Branch Name",
+      "value": "main",
+      "required": true
+    }
+  },
+  "buildpacks": [
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "heroku/nodejs"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "stack": "container"
+}
