@@ -1,4 +1,4 @@
-<h1 align="center"><b>❤️ ALEXA MUSIC OLD 0 New Repo ❤️</b></h1>
+<h1 align="center"><b>❤️ ALEXA MUSIC OLD 1.0.0 ❤️</b></h1>
 
 <h4 align="center">Alexa A Powerful, Smart And Simple Bot To Play Audio And Video Song In Telegram<br> ... Written With Python and Telethon...</h4>
 
